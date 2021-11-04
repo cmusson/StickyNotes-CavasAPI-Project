@@ -1,0 +1,6 @@
+.sticky-note {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+}
