@@ -3,10 +3,10 @@ import "../components/StickyNote.css";
 
 function StickyNote() {
   return (
-    <div>
+    <div draggable="true">
       <form className="sticky-note">
-        <h3>I am a sticky note!</h3>
-        <textarea placeholder="Create a new note!"></textarea>
+        <textarea></textarea>
+        <button className="add-button">Add Note</button>
       </form>
     </div>
   );

@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+}
+
+.canvas {
+  padding: 50px;
+  height: 100vh;
+  background-color: whitesmoke;
+  background-size: cover;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: turquoise;
+}
+
+.input {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  height: 100px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+button:hover {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.note {
+  position: absolute;
+  cursor: pointer;
+  background-color: lavender;
+  background-size: cover;
+  top: 100px;
+  left: 300px;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.note-body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  height: 100%;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  background-color: transparent;
+  outline: none;
+  border-color: transparent;
+}
+
+.delete {
+  position: absolute;
+  right: 15px;
+}
+
+.delete:hover {
+  opacity: 0.5;
+}
