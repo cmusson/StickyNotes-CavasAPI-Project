@@ -21,7 +21,7 @@ export const CanvasProvider = ({ children }) => {
     context.scale(2, 2);
     context.fillStyle = "#0db9a1";
     context.lineCap = "round";
-    context.strokeStyle = "black";
+    context.strokeStyle = "white";
     context.lineWidth = 5;
     contextRef.current = context;
   };
