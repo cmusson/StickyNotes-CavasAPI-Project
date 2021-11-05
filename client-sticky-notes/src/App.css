@@ -7,18 +7,21 @@ body {
   display: flex;
 }
 
-.canvas {
+.app {
   padding: 50px;
+  padding-top: 20px;
   height: 100vh;
   background-color: #0db9a1;
   background-size: cover;
+  position: relative;
 }
 
 .main-features {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 200px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .input-form {
@@ -55,10 +58,10 @@ body {
 }
 
 .clear-button {
-  width: 80%;
+  width: 100%;
   cursor: pointer;
   outline: none;
-  background-color: #ef476f;
+  background-color: #ffc145;
   border-radius: 1rem;
   border: solid black;
   color: white;
@@ -66,14 +69,12 @@ body {
 }
 
 .clear-button:hover {
-  background-color: #f17a96;
+  background-color: #ffe1a4;
 }
 
 .note {
   position: absolute;
   cursor: pointer;
-  /* background-image: url("https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/zgs1n91fde6x4tqrlhyn"); */
-  background-color: #ffc145;
   background-size: cover;
   height: 200px;
   width: 200px;
@@ -107,4 +108,50 @@ body {
 
 .note-form {
   height: 100%;
+}
+
+.form-colors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.pallet {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.color {
+  border: solid black;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.color:hover {
+  opacity: 0.5;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: #ef476f;
+}
+
+.blue {
+  background-color: #007aff;
+}
+
+.yellow {
+  background-color: #ffc145;
+}
+
+.clear-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
 }
