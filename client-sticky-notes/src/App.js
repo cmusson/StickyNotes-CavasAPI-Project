@@ -6,7 +6,9 @@ function App() {
   const [noteInput, setNoteInput] = useState("");
   const [notes, setNotes] = useState([]);
 
+  // creates note object and stores in array
   const addNote = (e) => {
+    // stops page rerendering
     e.preventDefault();
 
     const newNote = {
@@ -21,11 +23,13 @@ function App() {
     setNoteInput("");
   };
 
+  // stops any other events from firing when dragging
   const dragOver = (e) => {
     e.stopPropagation();
     e.preventDefault();
   };
 
+  // places the note in the new location by assigning new x and y coordinates to the object
   const dropNote = (e) => {
     let left = e.pageX - 120;
     let top = e.pageY;
@@ -40,6 +44,7 @@ function App() {
     setNotes([...updatedNotes]);
   };
 
+  // edits the text in the selected note
   const editNote = (e) => {
     let updatedNotes = notes;
     updatedNotes.forEach((el) => {
@@ -50,6 +55,7 @@ function App() {
     setNotes([...updatedNotes]);
   };
 
+  // deletes the note via filter method
   const deleteNote = (e) => {
     setNotes(notes.filter((note) => note.id !== e.currentTarget.id));
   };
