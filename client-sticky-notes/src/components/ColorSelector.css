@@ -1,0 +1,28 @@
+.pallet {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.color {
+  border: solid black;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: #ef476f;
+}
+
+.blue {
+  background-color: #007aff;
+}
+
+.yellow {
+  background-color: #ffc145;
+}
