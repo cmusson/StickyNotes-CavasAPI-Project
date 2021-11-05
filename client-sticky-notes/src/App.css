@@ -5,6 +5,7 @@ body {
 
 .title {
   display: flex;
+  position: absolute;
 }
 
 .app {
@@ -22,6 +23,8 @@ body {
   width: 200px;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  top: 100px;
 }
 
 .input-form {
