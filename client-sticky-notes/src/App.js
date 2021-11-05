@@ -18,7 +18,7 @@ function App() {
       text: noteInput,
       rotate: Math.floor(Math.random() * 22),
       top: 100,
-      left: 300,
+      left: 400,
       color: "#ffc145",
     };
 
