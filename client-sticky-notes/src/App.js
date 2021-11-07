@@ -1,12 +1,13 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Canvas } from "./Canvas";
-import { ClearCanvasButton } from "./ClearCanvasButton";
+import Canvas from "./Canvas";
+import ClearCanvasButton from "./ClearCanvasButton";
 
 function App() {
   const [noteInput, setNoteInput] = useState("");
   const [notes, setNotes] = useState([]);
+  const canvasRef = useRef(null);
 
   // creates note object and stores in array
   const addNote = (e) => {
@@ -98,7 +99,7 @@ function App() {
           <button className="clear-button" onClick={() => setNotes([])}>
             Clear Notes
           </button>
-          <ClearCanvasButton />
+          <ClearCanvasButton canvasRef={canvasRef} />
         </div>
       </div>
 
@@ -151,7 +152,7 @@ function App() {
           </div>
         </div>
       ))}
-      <Canvas style={{ backgroundColor: "green" }} />
+      <Canvas canvasRef={canvasRef} style={{ backgroundColor: "green" }} />
     </div>
   );
 }
