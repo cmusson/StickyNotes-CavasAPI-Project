@@ -8,6 +8,8 @@ Each note can be dragged and dropped wherever you like, the note's text is fully
 
 Users can draw on the canvas below the input area, clearing the canvas by pressing the clear drawing button.
 
+Multiple images can also be added on top of the canvas and moved where desired, then removed when desired.
+
 To run this app:
 
 - Navigate inside the client folder in the terminal
