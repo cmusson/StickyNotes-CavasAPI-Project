@@ -190,6 +190,8 @@ body {
   width: 110px;
   padding-left: 45px;
   padding-right: 0px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
   background-color: #007aff;
 }
 
@@ -203,9 +205,9 @@ body {
   text-align: center;
   align-items: center;
   color: white;
-  font-size: 14px;
+  font-size: 13.2px;
 }
 
 img {
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
