@@ -1,10 +1,10 @@
 import "./App.css";
 import React, { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Canvas from "./Canvas";
-import ClearCanvasButton from "./ClearCanvasButton";
-import AddImageButton from "./AddImageButton";
-import ClearImagesButton from "./ClearImagesButton";
+import Canvas from "./components/Canvas";
+import ClearCanvasButton from "./components/ClearCanvasButton";
+import AddImageButton from "./components/AddImageButton";
+import ClearImagesButton from "./components/ClearImagesButton";
 
 function App() {
   const [noteInput, setNoteInput] = useState("");
