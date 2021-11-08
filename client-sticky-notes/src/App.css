@@ -64,7 +64,7 @@ body {
   width: 100%;
   cursor: pointer;
   outline: none;
-  background-color: #ffc145;
+  background-color: #ef476f;
   border-radius: 1rem;
   border: solid black;
   color: white;
@@ -72,7 +72,7 @@ body {
 }
 
 .clear-button:hover {
-  background-color: #ffe1a4;
+  background-color: #f17a96;
 }
 
 .note {
@@ -87,6 +87,7 @@ body {
   border-radius: 4rem;
   border: 10px solid;
   border-color: black;
+  z-index: 2;
 }
 
 .note-body {
@@ -156,5 +157,55 @@ body {
 .clear-buttons {
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  margin-left: 5px;
+  margin-bottom: 75px;
+}
+
+.clear-canvas {
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  background-color: #ef476f;
+  border-radius: 1rem;
+  border: solid black;
+  color: white;
+  margin: 2px;
+}
+
+.clear-canvas:hover {
+  background-color: #f17a96;
+}
+
+.add-features {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-picker {
+  display: flex;
+  border-radius: 1rem;
+  border: solid black;
+  width: 110px;
+  padding-left: 45px;
+  padding-right: 0px;
+  background-color: #007aff;
+}
+
+.file-picker:hover {
+  background-color: #3498db;
+}
+
+.image-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+
+img {
+  border-radius: 2rem;
 }

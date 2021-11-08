@@ -1,5 +1,4 @@
 import React from "react";
-import "./ClearCanvasButton.css";
 
 const ClearCanvasButton = ({ canvasRef }) => {
   const clearCanvas = () => {

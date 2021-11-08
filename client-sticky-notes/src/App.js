@@ -3,10 +3,13 @@ import React, { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Canvas from "./Canvas";
 import ClearCanvasButton from "./ClearCanvasButton";
+import AddImageButton from "./AddImageButton";
+import ClearImagesButton from "./ClearImagesButton";
 
 function App() {
   const [noteInput, setNoteInput] = useState("");
   const [notes, setNotes] = useState([]);
+  const [previewSource, setPreviewSource] = useState([]);
   const canvasRef = useRef(null);
 
   // creates note object and stores in array
@@ -86,23 +89,31 @@ function App() {
         <h1>Sticky Notes!</h1>
       </div>
       <div className="main-features">
-        <form className="input-form" onSubmit={addNote}>
-          <textarea
-            className="input"
-            value={noteInput}
-            onChange={(event) => setNoteInput(event.target.value)}
-            placeholder="Create a new note"
-          ></textarea>
-          <button className="add-button">Add</button>
-        </form>
+        <div className="add-features">
+          <form className="input-form" onSubmit={addNote}>
+            <textarea
+              className="input"
+              value={noteInput}
+              onChange={(event) => setNoteInput(event.target.value)}
+              placeholder="Create a new note"
+            ></textarea>
+            <button className="add-button">Add Note</button>
+          </form>
+          <AddImageButton
+            className="add-image"
+            previewSource={previewSource}
+            setPreviewSource={setPreviewSource}
+          />
+        </div>
+
         <div className="clear-buttons">
           <button className="clear-button" onClick={() => setNotes([])}>
             Clear Notes
           </button>
           <ClearCanvasButton canvasRef={canvasRef} />
+          <ClearImagesButton setPreviewSource={setPreviewSource} />
         </div>
       </div>
-
       {notes.map((stickyNote) => (
         <div
           className="note"
@@ -152,7 +163,10 @@ function App() {
           </div>
         </div>
       ))}
-      <Canvas canvasRef={canvasRef} style={{ backgroundColor: "green" }} />
+      <Canvas
+        canvasRef={canvasRef}
+        style={{ backgroundColor: "transparent" }}
+      />
     </div>
   );
 }
