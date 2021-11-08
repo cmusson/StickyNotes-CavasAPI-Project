@@ -1,10 +1,16 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Canvas from "./Canvas";
+import ClearCanvasButton from "./ClearCanvasButton";
+import AddImageButton from "./AddImageButton";
+import ClearImagesButton from "./ClearImagesButton";
 
 function App() {
   const [noteInput, setNoteInput] = useState("");
   const [notes, setNotes] = useState([]);
+  const [previewSource, setPreviewSource] = useState([]);
+  const canvasRef = useRef(null);
 
   // creates note object and stores in array
   const addNote = (e) => {
@@ -16,7 +22,8 @@ function App() {
       text: noteInput,
       rotate: Math.floor(Math.random() * 22),
       top: 100,
-      left: 300,
+      left: 400,
+      color: "#ffc145",
     };
 
     setNotes([...notes, newNote]);
@@ -73,7 +80,7 @@ function App() {
   };
 
   return (
-    <div className="canvas" onDragOver={dragOver}>
+    <div className="app" onDragOver={dragOver}>
       <div className="title">
         <img
           src="https://www.teachwithkoala.com/img/icons/koala-logo-icon.svg"
@@ -82,20 +89,31 @@ function App() {
         <h1>Sticky Notes!</h1>
       </div>
       <div className="main-features">
-        <form className="input-form" onSubmit={addNote}>
-          <textarea
-            className="input"
-            value={noteInput}
-            onChange={(event) => setNoteInput(event.target.value)}
-            placeholder="Create a new note"
-          ></textarea>
-          <button className="add-button">Add</button>
-        </form>
-        <button className="clear-button" onClick={() => setNotes([])}>
-          Clear All
-        </button>
-      </div>
+        <div className="add-features">
+          <form className="input-form" onSubmit={addNote}>
+            <textarea
+              className="input"
+              value={noteInput}
+              onChange={(event) => setNoteInput(event.target.value)}
+              placeholder="Create a new note"
+            ></textarea>
+            <button className="add-button">Add Note</button>
+          </form>
+          <AddImageButton
+            className="add-image"
+            previewSource={previewSource}
+            setPreviewSource={setPreviewSource}
+          />
+        </div>
 
+        <div className="clear-buttons">
+          <button className="clear-button" onClick={() => setNotes([])}>
+            Clear Notes
+          </button>
+          <ClearCanvasButton canvasRef={canvasRef} />
+          <ClearImagesButton setPreviewSource={setPreviewSource} />
+        </div>
+      </div>
       {notes.map((stickyNote) => (
         <div
           className="note"
@@ -106,6 +124,7 @@ function App() {
             transform: `rotate(${stickyNote.rotate}deg)`,
             left: `${stickyNote.left}px`,
             top: `${stickyNote.top}px`,
+            backgroundColor: stickyNote.color,
           }}
         >
           <div className="delete" onClick={deleteNote} id={stickyNote.id}>
@@ -144,6 +163,10 @@ function App() {
           </div>
         </div>
       ))}
+      <Canvas
+        canvasRef={canvasRef}
+        style={{ backgroundColor: "transparent" }}
+      />
     </div>
   );
 }

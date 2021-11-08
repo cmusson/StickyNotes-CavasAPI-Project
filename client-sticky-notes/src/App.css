@@ -5,20 +5,26 @@ body {
 
 .title {
   display: flex;
+  position: absolute;
 }
 
-.canvas {
+.app {
   padding: 50px;
+  padding-top: 20px;
   height: 100vh;
   background-color: #0db9a1;
   background-size: cover;
+  position: relative;
 }
 
 .main-features {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 200px;
   align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 100px;
 }
 
 .input-form {
@@ -55,7 +61,7 @@ body {
 }
 
 .clear-button {
-  width: 80%;
+  width: 100%;
   cursor: pointer;
   outline: none;
   background-color: #ef476f;
@@ -72,8 +78,6 @@ body {
 .note {
   position: absolute;
   cursor: pointer;
-  /* background-image: url("https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/zgs1n91fde6x4tqrlhyn"); */
-  background-color: #ffc145;
   background-size: cover;
   height: 200px;
   width: 200px;
@@ -83,6 +87,7 @@ body {
   border-radius: 4rem;
   border: 10px solid;
   border-color: black;
+  z-index: 2;
 }
 
 .note-body {
@@ -148,3 +153,64 @@ body {
 .yellow {
   background-color: #ffc145;
 }
+<<<<<<< HEAD
+=======
+
+.clear-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-bottom: 75px;
+}
+
+.clear-canvas {
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  background-color: #ef476f;
+  border-radius: 1rem;
+  border: solid black;
+  color: white;
+  margin: 2px;
+}
+
+.clear-canvas:hover {
+  background-color: #f17a96;
+}
+
+.add-features {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-picker {
+  display: flex;
+  border-radius: 1rem;
+  border: solid black;
+  width: 110px;
+  padding-left: 45px;
+  padding-right: 0px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  background-color: #007aff;
+}
+
+.file-picker:hover {
+  background-color: #3498db;
+}
+
+.image-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: 13.2px;
+}
+
+img {
+  border-radius: 1rem;
+}
+>>>>>>> drawing
