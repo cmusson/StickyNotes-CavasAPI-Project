@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AddImageButton = ({ previewSource, setPreviewSource }) => {
-  const [fileInputState, setFileInputState] = useState("");
-
   const handleFileInputChange = (e) => {
     const file = e.target.files[0];
     previewFile(file);
@@ -31,7 +29,6 @@ const AddImageButton = ({ previewSource, setPreviewSource }) => {
           id="filePicker"
           name="image"
           onChange={handleFileInputChange}
-          value={fileInputState}
           style={{ visibility: "hidden" }}
           type={"file"}
         />
