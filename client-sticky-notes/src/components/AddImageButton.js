@@ -7,8 +7,10 @@ const AddImageButton = ({ previewSource, setPreviewSource }) => {
   };
 
   const previewFile = (file) => {
+    // built in API to read the file
     const reader = new FileReader();
     reader.readAsDataURL(file);
+    // after loading
     reader.onloadend = () => {
       setPreviewSource([...previewSource, reader.result]);
     };
