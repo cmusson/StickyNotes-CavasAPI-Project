@@ -1,4 +1,4 @@
-# Koala-mini-project
+# StickyNotes-CanvasAPI-Project
 
 A Sticky Notes App!
 
@@ -21,3 +21,6 @@ Hope you enjoy my work!
 Any questions or comments please let me know :)
 
 Connor
+
+<img width="1084" alt="image" src="https://user-images.githubusercontent.com/83961538/143321883-ae588a6f-f1df-4a7d-853a-98bbb9511212.png">
+
