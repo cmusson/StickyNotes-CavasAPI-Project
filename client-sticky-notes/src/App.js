@@ -38,7 +38,7 @@ function App() {
 
   // places the note in the new location by assigning new x and y coordinates to the object
   const dropNote = (e) => {
-    let left = e.pageX - 120;
+    let left = e.pageX;
     let top = e.pageY;
 
     let updatedNotes = notes;
