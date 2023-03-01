@@ -9,8 +9,7 @@ body {
 }
 
 .app {
-  padding: 50px;
-  padding-top: 20px;
+  padding: 20px;
   height: 100vh;
   background-color: #0db9a1;
   background-size: cover;
@@ -197,6 +196,7 @@ body {
 
 .file-picker:hover {
   background-color: #3498db;
+  cursor: pointer;
 }
 
 .image-form {
