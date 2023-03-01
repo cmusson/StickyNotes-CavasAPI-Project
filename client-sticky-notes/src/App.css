@@ -76,7 +76,7 @@ body {
 
 .note {
   position: absolute;
-  cursor: pointer;
+  cursor: grab;
   background-size: cover;
   height: 200px;
   width: 200px;
@@ -210,4 +210,8 @@ body {
 
 img {
   border-radius: 1rem;
+}
+
+canvas {
+  cursor: crosshair;
 }

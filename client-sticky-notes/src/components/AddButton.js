@@ -58,6 +58,7 @@ const AddButton = ({ type, previewSource, setPreviewSource, addNote }) => {
                     top: "200px",
                     left: "400px",
                     position: "absolute",
+                    cursor: "grab",
                   }}
                 />
               </div>
