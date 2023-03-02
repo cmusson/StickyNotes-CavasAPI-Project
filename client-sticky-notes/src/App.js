@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useRef, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import Canvas from "./components/Canvas";
 import AddFeatures from "./components/AddFeatures";
 import ClearButton from "./components/ClearButton";
