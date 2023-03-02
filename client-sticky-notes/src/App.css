@@ -150,6 +150,7 @@ h4 {
 
 .color:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .white {

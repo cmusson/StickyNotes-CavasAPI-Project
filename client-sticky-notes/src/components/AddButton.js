@@ -44,12 +44,7 @@ const AddButton = ({ type, previewSource, setPreviewSource, addNote }) => {
 
           {previewSource &&
             previewSource.map((img) => (
-              <div
-                draggable="true"
-                onDragEnd={dropImage}
-                key={img}
-                className="image"
-              >
+              <div draggable="true" onDragEnd={dropImage} key={img}>
                 <img
                   src={img}
                   alt="chosen file"
@@ -59,6 +54,7 @@ const AddButton = ({ type, previewSource, setPreviewSource, addNote }) => {
                     left: "400px",
                     position: "absolute",
                     cursor: "grab",
+                    border: "5px solid black",
                   }}
                 />
               </div>
