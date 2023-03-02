@@ -54,9 +54,9 @@ function App() {
         />
 
         <div className="clear-buttons">
-          <ClearButton handleClick={clearNotes}>Clear Notes</ClearButton>
-          <ClearButton handleClick={clearDrawings}>Clear Drawings</ClearButton>
-          <ClearButton handleClick={clearImages}>Clear Images</ClearButton>
+          <ClearButton handleClick={clearNotes}>Notes</ClearButton>
+          <ClearButton handleClick={clearDrawings}>Drawings</ClearButton>
+          <ClearButton handleClick={clearImages}>Images</ClearButton>
         </div>
       </div>
 
